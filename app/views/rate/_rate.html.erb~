@@ -1,0 +1,12 @@
+
+ 
+<p>
+  <strong>rate:</strong>
+  <%= rate.body %>
+</p>
+ 
+<p>
+  <%= link_to 'Destroy Rate', [rate.cat, rate],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

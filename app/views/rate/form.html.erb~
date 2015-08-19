@@ -1,0 +1,10 @@
+<%= form_for([@cat, @cat.rates.build]) do |f| %>
+ 
+  <p>
+    <%= f.label :body %><br>
+    <%= f.integer :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

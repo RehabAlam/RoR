@@ -1,0 +1,31 @@
+<p>
+  <strong>category:</strong>
+  <%= @cats.category %>
+</p>
+ 
+<p>
+  <strong>title:</strong>
+  <%= @cats.title %>
+</p>
+
+ 
+<h2>rates</h2>
+<% @cats.rates.each do |rate| %>
+ 
+  <p>
+    <strong>rate:</strong>
+    <%= rate.body %>
+  </p>
+<% end %>
+
+<h2>Add a rate:</h2>
+<%= form_for([@cat, @cat.rate.build]) do |f| %>
+ 
+  <p>
+    <%= f.label :body %><br>
+    <%= f.integer :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

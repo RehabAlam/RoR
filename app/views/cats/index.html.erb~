@@ -1,0 +1,23 @@
+<h1> categories</h1>
+ 
+<table>
+  <tr>
+    <th>category</th>
+    <th>title</th>
+	<th colspan="3"></th>
+  </tr>
+ 
+  <% @cats.each do |cat| %>
+    <tr>
+      <td><%= cat.category %></td>
+      <td><%= cat.title %></td>
+	  <td><%= link_to 'Show', cats_path(cat) %></td>
+      <td><%= link_to 'Edit', edit_cat_path(cat) %></td>
+   
+ <td><%= link_to 'Destroy', cat_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+</table>
